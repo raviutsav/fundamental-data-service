@@ -38,3 +38,23 @@ CREATE INDEX idx_fundamental_data_ticker_period_year
 -- Improve join performance on FK
 CREATE INDEX idx_fundamental_data_type_id
     ON fundamental_data (fundamental_data_type_id);
+
+
+-- 1. Create ENUM type
+CREATE TYPE financial_statement_type AS ENUM (
+    'per_share_data_array',
+    'common_size_ratios',
+    'income_statement',
+    'balance_sheet',
+    'cashflow_statement',
+    'valuation_ratios',
+    'valuation_and_quality',
+    'other'
+);
+
+-- 2. Create table
+CREATE TABLE fundamental_data_type (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    type financial_statement_type NOT NULL,
+    name VARCHAR(50) NOT NULL
+);
