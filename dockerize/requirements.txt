@@ -1,7 +1,6 @@
-psycopg2
+psycopg2-binary
 fastapi
 pydantic
 sqlalchemy
 uvicorn[standard]
 python-dotenv
-setuptools==58.2.0

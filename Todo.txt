@@ -1,6 +1,6 @@
 1. Insert the raw data into relational db (Postgres) -> DONE
 2. Create APIs on this db to fetch data. (FastAPI) -> DONE
-3. Dockerize it.
+3. Dockerize it. -> DONE
 4. Make it run on Rasberry pi, and check if you are able to query from host connected to same network
 5. Increase load and check prometheus
 6. put database and service in different container and scale them independently
